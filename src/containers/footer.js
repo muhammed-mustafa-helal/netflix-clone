@@ -17,7 +17,7 @@ export const FooterContainer = () => {
           <Footer.Link href="#">Help Centre</Footer.Link>
           <Footer.Link href="#">Jobs</Footer.Link>
           <Footer.Link href="#">Terms of Use</Footer.Link>
-          <Footer.Link href="#">Contact Us </Footer.Link>/
+          <Footer.Link href="#">Contact Us </Footer.Link>
         </Footer.Column>
         <Footer.Column>
           <Footer.Link href="#">Account</Footer.Link>
