@@ -34,7 +34,7 @@ export const Item = styled.div`
   color: white;
   margin: auto;
   margin-bottom: 10px;
-  max-width: 728px;
+  max-width: 700px;
   width: 100%;
 
   &:first-of-type {
@@ -88,7 +88,7 @@ export const Body = styled.div`
   }
   &.open {
     max-height: 1200px;
-    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    transition: max-height 0.5s cubic-bezier(0.5, 0, 0.1, 1);
   }
 
   span {
