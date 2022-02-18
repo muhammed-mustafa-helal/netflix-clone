@@ -48,7 +48,7 @@ export const TextSmall = styled.p`
   margin-top: 10px;
   font-size: 13px;
   line-height: normal;
-  color: #8c8c8c;
+  color: #8C8C8C;
 `;
 
 export const Link = styled(ReactRouterLink)`
@@ -64,7 +64,7 @@ export const Input = styled.input`
   background: #333;
   border-radius: 4px;
   border: 0;
-  color: #fff;
+  color: #FFF;
   height: 50px;
   line-height: 50px;
   padding: 5px 20px;
@@ -83,7 +83,7 @@ export const Submit = styled.button`
   margin: 24px 0 12px;
   padding: 16px;
   border: 0;
-  color: white;
+  color: #fff;
   cursor: pointer;
 
   &:disabled {
