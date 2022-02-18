@@ -48,6 +48,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     padding: 8px 17px;
     cursor: pointer;
     box-sizing: border-box;
+    text-decoration: none;
 
     &:hover {
         background-color: #F40612;
