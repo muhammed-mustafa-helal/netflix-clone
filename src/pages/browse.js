@@ -1,8 +1,14 @@
+import { useContent } from "../hooks"
+import selectionFilter from '../utils/selection-filter'
 
-const browse = () => {
+const Browse = () => {
+  const { series } = useContent('series')
+  const { films } = useContent('films')
+
+  const slides = selectionFilter({ series, films })
   return (
-    <div>Hello from browse</div>
+    <div>Hello from Browse</div>
   )
 }
 
-export default browse
+export default Browse
