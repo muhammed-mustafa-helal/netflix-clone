@@ -1,22 +1,22 @@
-import { useState, useContext } from 'react'
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { FirebaseContext } from '../context/firebase';
+import { Form } from '../components';
+import { HeaderContainer } from '../containers/header';
+import { FooterContainer } from '../containers/footer';
+import * as ROUTES from '../constants/routes';
 
-import { useHistory } from 'react-router-dom'
-
-import { FirebaseContext } from '../context/firebase'
-import * as ROUTES from '../constants/routes'
-
-import { HeaderContainer } from '../containers/header'
-import { FooterContainer } from '../containers/footer'
-import { Form } from '../components'
-
-const SignIn = () => {
+export default function SignIn() {
   const history = useHistory();
-  const { firebase } = useContext(FirebaseContext)
-  const [emailAddress, setEmailAddress] = useState();
-  const [password, setPassword] = useState();
-  const [error, setError] = useState('')
+  const { firebase } = useContext(FirebaseContext);
 
-  const SigninHandler = (event) => {
+  const [emailAddress, setEmailAddress] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const isInvalid = password === '' || emailAddress === '';
+
+  const handleSignin = (event) => {
     event.preventDefault();
 
     return firebase
@@ -24,23 +24,22 @@ const SignIn = () => {
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
         history.push(ROUTES.BROWSE);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         setEmailAddress('');
         setPassword('');
         setError(error.message);
-      })
-  }
-
-  const isInvalid = emailAddress === '' || password === '';
+      });
+  };
 
   return (
     <>
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
 
-          <Form.Base onSubmit={SigninHandler} method="POST">
+          <Form.Base onSubmit={handleSignin} method="POST">
             <Form.Input
               placeholder="Email address"
               value={emailAddress}
@@ -68,7 +67,5 @@ const SignIn = () => {
       </HeaderContainer>
       <FooterContainer />
     </>
-  )
+  );
 }
-
-export default SignIn;

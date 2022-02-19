@@ -1,12 +1,15 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-html, body {
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  html, body {
     height: 100%;
-    font-family: 'Helvetica Neue', Arial, Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #000;
-    color: #333;
-    font-size:16px
+    background-color: #000000;
+    color: #333333;
+    font-size: 16px;
 }`;
