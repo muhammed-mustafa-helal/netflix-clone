@@ -9,7 +9,7 @@ import { HeaderContainer } from '../containers/header'
 import { FooterContainer } from '../containers/footer'
 import { Form } from '../components'
 
-const Signin = () => {
+const SignIn = () => {
   const history = useHistory();
   const { firebase } = useContext(FirebaseContext)
   const [emailAddress, setEmailAddress] = useState();
@@ -71,4 +71,4 @@ const Signin = () => {
   )
 }
 
-export default Signin;
+export default SignIn;

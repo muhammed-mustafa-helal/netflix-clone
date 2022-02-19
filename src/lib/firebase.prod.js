@@ -3,10 +3,8 @@ import 'firebase/firestore';
 import 'firebase/auth';
 // import { seedDatabase } from '../seed';
 
-//Seed the database
 
 
-//Config here
 
 
 const config = {
